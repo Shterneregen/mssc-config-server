@@ -14,12 +14,14 @@ repositories {
 
 ext {
 	set("springCloudVersion", "Hoxton.SR6")
+	set("logstashLogbackEncoderVersion", "6.4")
 }
 
 dependencies {
 	implementation(
 			"org.springframework.cloud:spring-cloud-config-server",
-			"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
+			"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
+			"net.logstash.logback:logstash-logback-encoder:$logstashLogbackEncoderVersion"
 	)
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude group: "org.junit.vintage", module: "junit-vintage-engine"
