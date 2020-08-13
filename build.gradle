@@ -19,6 +19,7 @@ ext {
 
 dependencies {
 	implementation(
+			"org.springframework.boot:spring-boot-starter-security",
 			"org.springframework.cloud:spring-cloud-config-server",
 			"org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
 			"net.logstash.logback:logstash-logback-encoder:$logstashLogbackEncoderVersion"
